@@ -28,22 +28,48 @@ class Registrasi:
 
     # Getter
     def getIdRegistrasi(self):
-        """Mengembalikan ID registrasi."""
+        """
+        Mengembalikan ID registrasi.
+        
+        Returns:
+            int: ID yang unik pada registrasi.
+        """
         return self.__idRegistrasi
 
     def getTglMasuk(self):
-        """Mengembalikan tanggal masuk registrasi."""
+        """
+        Mengembalikan tanggal masuk registrasi.
+        
+        Returns:
+            date: Tanggal mulai registrasi.
+        """
         return self.__tglMasuk
 
     def getTglKeluar(self):
-        """Mengembalikan tanggal keluar registrasi."""
+        """
+        Mengembalikan tanggal keluar registrasi.
+        
+        Returns:
+            date: Tanggal berakhir registrasi.
+        """
         return self.__tglKeluar
 
     def getStatus(self):
-        """Mengembalikan status registrasi."""
+        """
+        Mengembalikan status registrasi.
+        
+        Returns:
+            str: Status registrasi.
+        """
         return self.__status
 
     # Setter
     def setStatus(self, status):
-        """Mengubah status registrasi."""
+        """
+        Mengubah status registrasi.
+        
+        Args:
+            status(str): Status baru registrasi.
+        """
         self.__status = status
+
