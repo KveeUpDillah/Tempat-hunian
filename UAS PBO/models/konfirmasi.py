@@ -27,13 +27,28 @@ class Konfirmasi:
 
     # Getter
     def getLamaTinggal(self):
-        """Mengembalikan lama tinggal atau penggunaan area (dalam hari)."""
+        """
+        Mengembalikan lama tinggal atau penggunaan area (dalam hari).
+        
+        Returns:
+            int: Lama tinggal dalam hari.
+        """
         return self.__lamaTinggal
 
     def getArea(self):
-        """Mengembalikan objek Area yang dikonfirmasi."""
+        """
+        Mengembalikan objek Area yang dikonfirmasi.
+        
+        Returns:
+            Area: Objek area terkait.
+        """
         return self.__area
 
     def getKeterangan(self):
-        """Mengembalikan keterangan tambahan terkait konfirmasi."""
+        """
+        Mengembalikan keterangan tambahan terkait konfirmasi.
+        
+        Returns:
+            str: Keterangan konfirmasi.
+        """
         return self.__keterangan
