@@ -68,7 +68,7 @@ class Area:
             kapasitas (int): Kapasitas baru area. Tidak boleh negatif.
 
         Raises:
-            ValueError: Jika kapasitas bernilai negatif.
+            ValueError: Jika kapasitas bernilai negatif, program akan berhenti.
         """
         if kapasitas < 0:
             raise ValueError("Kapasitas tidak boleh negatif")
@@ -82,3 +82,4 @@ class Area:
             status (str): Status baru area.
         """
         self.__status = status
+
