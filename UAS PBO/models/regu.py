@@ -5,7 +5,7 @@ class Regu:
     Attributes:
         __idRegu (int): ID unik regu.
         __namaRegu (str): Nama regu.
-        __anggota (list): Daftar anggota regu.
+        __anggota (list): Daftar anggota yang tergabung/bertambah dalam regu.
     """
 
     def __init__(self, id_regu, nama_regu, anggota: list):
@@ -23,22 +23,47 @@ class Regu:
 
     # Getter
     def getIdRegu(self):
-        """Mengembalikan ID regu."""
+        """
+        Mengembalikan ID regu.
+        
+        Returns:
+            int: ID yang unik pada regu.
+        """
         return self.__idRegu
 
     def getNamaRegu(self):
-        """Mengembalikan nama regu."""
+        """Mengembalikan nama regu.
+        
+        Returns:
+            string: Nama regu.
+        """
         return self.__namaRegu
 
     def getAnggota(self):
-        """Mengembalikan daftar anggota regu."""
+        """
+        Mengembalikan daftar anggota regu.
+        
+        Returns:
+            list: daftar anggota baru.
+        """
         return self.__anggota
 
     # Setter
     def setNamaRegu(self, nama):
-        """Mengubah nama regu."""
+        """
+        Mengubah nama regu.
+        
+        Args:
+            nama(string): Nama baru untuk regu.
+        """
         self.__namaRegu = nama
 
     def setAnggota(self, anggota: list):
-        """Mengubah daftar anggota regu."""
+        """
+        Mengubah daftar anggota regu.
+        
+        Args:
+            anggota(list): Daftar anggota baru untuk regu.
+        """
         self.__anggota = anggota
+
