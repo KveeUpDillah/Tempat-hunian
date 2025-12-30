@@ -23,22 +23,48 @@ class Pengelola:
 
     # Getter
     def getIdPetugas(self):
-        """Mengembalikan ID petugas."""
+        """
+        Mengembalikan ID petugas.
+        
+        Returns:
+            ID yang unik pada petugas.
+        """
         return self.__idPetugas
 
     def getNama(self):
-        """Mengembalikan nama petugas."""
+        """
+        Mengembalikan nama petugas.
+        
+        Returns:
+            Nama petugas.
+        """
         return self.__nama
 
     def getJabatan(self):
-        """Mengembalikan jabatan petugas."""
+        """
+        Mengembalikan jabatan petugas.
+        
+        Returns:
+            Jabatan atau posisi petugas.
+        """
         return self.__jabatan
 
     # Setter
     def setNama(self, nama):
-        """Mengubah nama petugas."""
+        """
+        Mengubah nama petugas.
+        
+        Args:
+            nama(str): Nama baru untuk petugas.
+        """
         self.__nama = nama
 
     def setJabatan(self, jabatan):
-        """Mengubah jabatan petugas."""
+        """
+        Mengubah jabatan petugas.
+        
+        Args:
+            jabatan(str): Jabatan baru untuk petugas.
+        """
         self.__jabatan = jabatan
+
