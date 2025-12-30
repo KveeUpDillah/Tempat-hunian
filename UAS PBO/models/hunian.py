@@ -70,8 +70,9 @@ class Hunian(Area):
             kapasitas (int): Kapasitas baru hunian. Tidak boleh negatif.
 
         Raises:
-            ValueError: Jika kapasitas bernilai negatif.
+            ValueError: Jika kapasitas bernilai negatif, program akan berhenti.
         """
         if kapasitas < 0:
             raise ValueError("Kapasitas hunian tidak boleh negatif")
         self.__kapasitas = kapasitas
+
