@@ -1,4 +1,53 @@
-class Area:
+from abc import ABC, abstractmethod
+
+class AbstractArea(ABC):
+    """
+    Abstract class yang mendefinisikan kontrak perilaku untuk Area.
+    Setiap kelas turunan wajib mengimplementasikan metode-metode berikut.
+    """
+
+    @abstractmethod
+    def getIdArea(self):
+        """
+        Mengembalikan ID area.
+
+        Returns:
+            int: ID unik area.
+        """
+        pass
+
+    @abstractmethod
+    def getNamaArea(self):
+        """
+        Mengembalikan nama area.
+
+        Returns:
+            str: Nama area.
+        """
+        pass
+
+    @abstractmethod
+    def getKapasitas(self):
+        """
+        Mengembalikan kapasitas area.
+
+        Returns:
+            int: Kapasitas area.
+        """
+        pass
+
+    @abstractmethod
+    def getStatus(self):
+        """
+        Mengembalikan status area.
+
+        Returns:
+            str: Status ketersediaan area.
+        """
+        pass
+
+
+class Area(AbstractArea):
     """
     Kelas untuk merepresentasikan sebuah area hunian atau fasilitas.
 
@@ -102,5 +151,3 @@ class Area:
             status (str): Status baru area.
         """
         self.__status = status
-
-

@@ -1,14 +1,68 @@
+from abc import ABC, abstractmethod
 from datetime import date
 
-class Registrasi:
+
+class AbstractRegistrasi(ABC):
     """
-    Kelas Registrasi merepresentasikan proses registrasi atau pencatatan masuk-keluar hunian/area.
+    Abstract class yang mendefinisikan kontrak perilaku untuk Registrasi.
+
+    Kelas abstrak ini memastikan setiap proses registrasi
+    memiliki identitas, tanggal masuk, tanggal keluar,
+    dan status yang dapat diakses melalui method yang telah ditentukan.
+    """
+
+    @abstractmethod
+    def getIdRegistrasi(self):
+        """
+        Mengembalikan ID registrasi.
+
+        Returns:
+            int: ID unik registrasi.
+        """
+        pass
+
+    @abstractmethod
+    def getTglMasuk(self):
+        """
+        Mengembalikan tanggal masuk registrasi.
+
+        Returns:
+            date: Tanggal mulai registrasi.
+        """
+        pass
+
+    @abstractmethod
+    def getTglKeluar(self):
+        """
+        Mengembalikan tanggal keluar registrasi.
+
+        Returns:
+            date: Tanggal berakhir registrasi.
+        """
+        pass
+
+    @abstractmethod
+    def getStatus(self):
+        """
+        Mengembalikan status registrasi.
+
+        Returns:
+            str: Status registrasi.
+        """
+        pass
+
+
+class Registrasi(AbstractRegistrasi):
+    """
+    Kelas Registrasi merepresentasikan proses registrasi
+    atau pencatatan masuk-keluar hunian/area.
 
     Attributes:
         __idRegistrasi (int): ID unik registrasi.
         __tglMasuk (date): Tanggal masuk/hunian dimulai.
         __tglKeluar (date): Tanggal keluar/hunian berakhir.
-        __status (str): Status registrasi (misal: 'aktif', 'selesai', 'dibatalkan').
+        __status (str): Status registrasi
+                        (misal: 'aktif', 'selesai', 'dibatalkan').
     """
 
     def __init__(self, id_registrasi, tgl_masuk: date, tgl_keluar: date, status: str):
@@ -30,7 +84,7 @@ class Registrasi:
     def getIdRegistrasi(self):
         """
         Mengembalikan ID registrasi.
-        
+
         Returns:
             int: ID yang unik pada registrasi.
         """
@@ -39,7 +93,7 @@ class Registrasi:
     def getTglMasuk(self):
         """
         Mengembalikan tanggal masuk registrasi.
-        
+
         Returns:
             date: Tanggal mulai registrasi.
         """
@@ -48,7 +102,7 @@ class Registrasi:
     def getTglKeluar(self):
         """
         Mengembalikan tanggal keluar registrasi.
-        
+
         Returns:
             date: Tanggal berakhir registrasi.
         """
@@ -57,7 +111,7 @@ class Registrasi:
     def getStatus(self):
         """
         Mengembalikan status registrasi.
-        
+
         Returns:
             str: Status registrasi.
         """
@@ -67,7 +121,7 @@ class Registrasi:
     def setTglMasuk(self, tglMasuk):
         """
         Mengubah tanggal masuk registrasi.
-        
+
         Args:
             tglMasuk (date): Tanggal masuk baru.
         """
@@ -76,18 +130,17 @@ class Registrasi:
     def setTglKeluar(self, tglKeluar):
         """
         Mengubah tanggal keluar registrasi.
-        
+
         Args:
             tglKeluar (date): Tanggal keluar baru.
         """
         self.__tglKeluar = tglKeluar
-    
+
     def setStatus(self, status):
         """
         Mengubah status registrasi.
-        
+
         Args:
             status (str): Status baru registrasi.
         """
         self.__status = status
-    

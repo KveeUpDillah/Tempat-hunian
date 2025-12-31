@@ -1,7 +1,58 @@
+from abc import ABC, abstractmethod
 from datetime import datetime
 
 
-class Konfirmasi:
+class AbstractKonfirmasi(ABC):
+    """
+    Abstract class yang mendefinisikan kontrak perilaku untuk Konfirmasi.
+
+    Kelas abstrak ini memastikan setiap kelas konfirmasi
+    memiliki informasi dasar seperti lama tinggal,
+    area hunian, keterangan, dan waktu konfirmasi.
+    """
+
+    @abstractmethod
+    def getLamaTinggal(self):
+        """
+        Mengembalikan lama tinggal.
+
+        Returns:
+            int: Lama tinggal dalam satuan hari.
+        """
+        pass
+
+    @abstractmethod
+    def getAreaHunian(self):
+        """
+        Mengembalikan area hunian yang dikonfirmasi.
+
+        Returns:
+            Area: Objek Area terkait konfirmasi.
+        """
+        pass
+
+    @abstractmethod
+    def getKeterangan(self):
+        """
+        Mengembalikan keterangan konfirmasi.
+
+        Returns:
+            str: Keterangan konfirmasi.
+        """
+        pass
+
+    @abstractmethod
+    def getWaktuKonfirmasi(self):
+        """
+        Mengembalikan waktu konfirmasi dibuat.
+
+        Returns:
+            datetime: Waktu konfirmasi.
+        """
+        pass
+
+
+class Konfirmasi(AbstractKonfirmasi):
     """
     Kelas Konfirmasi merepresentasikan proses konfirmasi hunian
     atau penggunaan suatu area oleh regu atau pengguna tertentu.

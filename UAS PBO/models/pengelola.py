@@ -1,6 +1,50 @@
-class Pengelola:
+from abc import ABC, abstractmethod
+
+
+class AbstractPengelola(ABC):
     """
-    Kelas Pengelola merepresentasikan petugas atau pengelola suatu area atau hunian.
+    Abstract class yang mendefinisikan kontrak perilaku untuk Pengelola.
+
+    Kelas abstrak ini memastikan bahwa setiap kelas pengelola
+    memiliki identitas, nama, dan jabatan yang dapat diakses
+    melalui method yang telah ditentukan.
+    """
+
+    @abstractmethod
+    def getIdPetugas(self):
+        """
+        Mengembalikan ID petugas.
+
+        Returns:
+            int: ID unik petugas.
+        """
+        pass
+
+    @abstractmethod
+    def getNama(self):
+        """
+        Mengembalikan nama petugas.
+
+        Returns:
+            str: Nama petugas.
+        """
+        pass
+
+    @abstractmethod
+    def getJabatan(self):
+        """
+        Mengembalikan jabatan petugas.
+
+        Returns:
+            str: Jabatan atau posisi petugas.
+        """
+        pass
+
+
+class Pengelola(AbstractPengelola):
+    """
+    Kelas Pengelola merepresentasikan petugas atau pengelola
+    suatu area atau hunian.
 
     Attributes:
         __idPetugas (int): ID unik petugas.
@@ -25,27 +69,27 @@ class Pengelola:
     def getIdPetugas(self):
         """
         Mengembalikan ID petugas.
-        
+
         Returns:
-            ID yang unik pada petugas.
+            int: ID yang unik pada petugas.
         """
         return self.__idPetugas
 
     def getNama(self):
         """
         Mengembalikan nama petugas.
-        
+
         Returns:
-            Nama petugas.
+            str: Nama petugas.
         """
         return self.__nama
 
     def getJabatan(self):
         """
         Mengembalikan jabatan petugas.
-        
+
         Returns:
-            Jabatan atau posisi petugas.
+            str: Jabatan atau posisi petugas.
         """
         return self.__jabatan
 
@@ -53,18 +97,17 @@ class Pengelola:
     def setNama(self, nama):
         """
         Mengubah nama petugas.
-        
+
         Args:
-            nama(str): Nama baru untuk petugas.
+            nama (str): Nama baru untuk petugas.
         """
         self.__nama = nama
 
     def setJabatan(self, jabatan):
         """
         Mengubah jabatan petugas.
-        
+
         Args:
-            jabatan(str): Jabatan baru untuk petugas.
+            jabatan (str): Jabatan baru untuk petugas.
         """
         self.__jabatan = jabatan
-
