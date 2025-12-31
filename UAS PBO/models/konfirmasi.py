@@ -8,7 +8,6 @@ class Konfirmasi:
         __lamaTinggal (int): Lama tinggal atau penggunaan area dalam satuan hari.
         __area (Area): Objek Area yang dikonfirmasi.
         __keterangan (str): Keterangan tambahan terkait konfirmasi.
-        __waktuKonfirmasi (datetime): Waktu pembuatan konfirmasi secara otomatis saat objek dibuat.
     """
 
     def __init__(self, lama_tinggal: int, area, keterangan: str):
@@ -80,3 +79,4 @@ class Konfirmasi:
             ket(str): Keterangan baru.
         """
         return self.__keterangan
+
