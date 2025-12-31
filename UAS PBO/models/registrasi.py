@@ -64,12 +64,30 @@ class Registrasi:
         return self.__status
 
     # Setter
+    def setTglMasuk(self, tglMasuk):
+        """
+        Mengubah tanggal masuk registrasi.
+        
+        Args:
+            tglMasuk (date): Tanggal masuk baru.
+        """
+        self.__tglMasuk = tglMasuk
+
+    def setTglKeluar(self, tglKeluar):
+        """
+        Mengubah tanggal keluar registrasi.
+        
+        Args:
+            tglKeluar (date): Tanggal keluar baru.
+        """
+        self.__tglKeluar = tglKeluar
+    
     def setStatus(self, status):
         """
         Mengubah status registrasi.
         
         Args:
-            status(str): Status baru registrasi.
+            status (str): Status baru registrasi.
         """
         self.__status = status
-
+    
