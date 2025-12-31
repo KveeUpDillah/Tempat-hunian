@@ -52,3 +52,31 @@ class Konfirmasi:
             str: Keterangan konfirmasi.
         """
         return self.__keterangan
+
+    # Setter
+    def setLamaTinggal(self):
+        """
+        Mengubah lama tinggal.
+
+        Args:
+            hari(int): Lama tinggal baru.
+        """
+        return self.__lamaTinggal
+        
+    def setArea(self):
+        """
+        Mengubah area yang akan ditempati.
+
+        Args:
+            area(Area): Area baru.
+        """
+        return self.__area
+    
+    def setKeterangan(self):
+        """
+        Mengubah keterangan atau catatan tambahan.
+        
+        Args:
+            ket(str): Keterangan baru.
+        """
+        return self.__keterangan
