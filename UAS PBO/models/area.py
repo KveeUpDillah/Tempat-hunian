@@ -35,19 +35,39 @@ class Area:
 
     # Getter
     def getIdArea(self):
-        """Mengembalikan ID area."""
+        """
+        Mengembalikan ID area.
+        
+        Returns:
+            int: ID unik untuk area.
+        """
         return self.__idArea
 
     def getNamaArea(self):
-        """Mengembalikan nama area."""
+        """
+        Mengembalikan nama area.
+
+        Returns:
+            str: Nama untuk area.
+        """
         return self.__namaArea
 
     def getKapasitas(self):
-        """Mengembalikan kapasitas area."""
+        """
+        Mengembalikan kapasitas area.
+
+        Returns:
+            int: Kapasitas untuk area.
+        """
         return self.__kapasitas
 
     def getStatus(self):
-        """Mengembalikan status area."""
+        """
+        Mengembalikan status area.
+
+        Returns:
+            str: Status untuk area.
+        """
         return self.__status
 
     # Setter
@@ -82,4 +102,5 @@ class Area:
             status (str): Status baru area.
         """
         self.__status = status
+
 
