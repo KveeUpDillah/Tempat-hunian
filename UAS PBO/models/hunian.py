@@ -38,28 +38,58 @@ class Hunian(Area):
 
     # Getter
     def getIdHunian(self):
-        """Mengembalikan ID hunian."""
+        """
+        Mengembalikan ID hunian.
+
+        Returns:
+            int: ID unik hunian.
+        """
         return self.__idHunian
 
     def getNamaHunian(self):
-        """Mengembalikan nama hunian."""
+        """
+        Mengembalikan nama hunian.
+
+        Returns:
+            string: Nama hunian.
+        """
         return self.__namaHunian
 
     def getLokasi(self):
-        """Mengembalikan lokasi hunian."""
+        """
+        Mengembalikan lokasi hunian.
+
+        Returns:
+            string: Lokasi hunian.
+        """
         return self.__lokasi
 
     def getKapasitas(self):
-        """Mengembalikan kapasitas hunian."""
+        """
+        Mengembalikan kapasitas hunian.
+
+        Returns:
+            int: Kapasitas hunian.
+        """
         return self.__kapasitas
 
     # Setter
     def setNamaHunian(self, nama):
-        """Mengubah nama hunian."""
+        """
+        Mengubah nama hunian.
+
+        Args:
+            nama(str): Nama baru untuk hunian.
+        """
         self.__namaHunian = nama
 
     def setLokasi(self, lokasi):
-        """Mengubah lokasi hunian."""
+        """
+        Mengubah lokasi hunian.
+
+        Args:
+            lokasi(str): Lokasi baru untuk hunian.
+        """
         self.__lokasi = lokasi
 
     def setKapasitas(self, kapasitas):
@@ -75,4 +105,5 @@ class Hunian(Area):
         if kapasitas < 0:
             raise ValueError("Kapasitas hunian tidak boleh negatif")
         self.__kapasitas = kapasitas
+
 
