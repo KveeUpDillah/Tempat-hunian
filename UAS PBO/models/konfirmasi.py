@@ -1,82 +1,102 @@
 from datetime import datetime
 
+
 class Konfirmasi:
     """
-    Kelas Konfirmasi merepresentasikan konfirmasi hunian atau penggunaan area tertentu.
+    Kelas Konfirmasi merepresentasikan proses konfirmasi hunian
+    atau penggunaan suatu area oleh regu atau pengguna tertentu.
+
+    Kelas ini menyimpan informasi lama tinggal, area hunian,
+    keterangan tambahan, serta waktu konfirmasi dibuat.
 
     Attributes:
-        __lamaTinggal (int): Lama tinggal atau penggunaan area dalam satuan hari.
-        __area (Area): Objek Area yang dikonfirmasi.
-        __keterangan (str): Keterangan tambahan terkait konfirmasi.
+        __lamaTinggal (int): Lama tinggal atau penggunaan area
+                             dalam satuan hari.
+        __areaHunian (Area): Objek Area yang dikonfirmasi.
+        __keterangan (str): Keterangan atau catatan tambahan
+                            terkait konfirmasi.
+        __waktuKonfirmasi (datetime): Waktu saat konfirmasi dibuat.
     """
 
     def __init__(self, lama_tinggal: int, area, keterangan: str):
         """
-        Inisialisasi objek Konfirmasi.
+        Konstruktor Konfirmasi.
+
+        Menginisialisasi objek Konfirmasi dengan lama tinggal,
+        area hunian, keterangan, serta waktu konfirmasi otomatis
+        sesuai waktu sistem.
 
         Args:
-            lama_tinggal (int): Lama tinggal atau penggunaan area dalam satuan hari.
+            lama_tinggal (int): Lama tinggal dalam satuan hari.
             area (Area): Objek Area yang dikonfirmasi.
-            keterangan (str): Keterangan tambahan terkait konfirmasi.
+            keterangan (str): Keterangan tambahan konfirmasi.
         """
         self.__lamaTinggal = lama_tinggal
-        self.__area = area
+        self.__areaHunian = area
         self.__keterangan = keterangan
         self.__waktuKonfirmasi = datetime.now()
 
     # Getter
     def getLamaTinggal(self):
         """
-        Mengembalikan lama tinggal atau penggunaan area (dalam hari).
-        
+        Mengembalikan lama tinggal.
+
         Returns:
-            int: Lama tinggal dalam hari.
+            int: Lama tinggal dalam satuan hari.
         """
         return self.__lamaTinggal
 
-    def getArea(self):
+    def getAreaHunian(self):
         """
-        Mengembalikan objek Area yang dikonfirmasi.
-        
+        Mengembalikan area hunian yang dikonfirmasi.
+
         Returns:
-            Area: Objek area terkait.
+            Area: Objek Area terkait konfirmasi.
         """
-        return self.__area
+        return self.__areaHunian
 
     def getKeterangan(self):
         """
-        Mengembalikan keterangan tambahan terkait konfirmasi.
-        
+        Mengembalikan keterangan tambahan konfirmasi.
+
         Returns:
             str: Keterangan konfirmasi.
         """
         return self.__keterangan
 
+    def getWaktuKonfirmasi(self):
+        """
+        Mengembalikan waktu konfirmasi dibuat.
+
+        Returns:
+            datetime: Waktu konfirmasi.
+        """
+        return self.__waktuKonfirmasi
+
     # Setter
-    def setLamaTinggal(self):
+    def setLamaTinggal(self, hari: int):
         """
         Mengubah lama tinggal.
 
         Args:
-            hari(int): Lama tinggal baru.
+            hari (int): Lama tinggal baru dalam satuan hari.
         """
-        return self.__lamaTinggal
-        
-    def setArea(self):
+        self.__lamaTinggal = hari
+
+    def setAreaHunian(self, area):
         """
-        Mengubah area yang akan ditempati.
+        Mengubah area hunian yang dikonfirmasi.
 
         Args:
-            area(Area): Area baru.
+            area (Area): Area hunian baru.
         """
-        return self.__area
-    
-    def setKeterangan(self):
+        self.__areaHunian = area
+
+    def setKeterangan(self, keterangan: str):
         """
         Mengubah keterangan atau catatan tambahan.
-        
-        Args:
-            ket(str): Keterangan baru.
-        """
-        return self.__keterangan
 
+        Args:
+            keterangan (str): Keterangan baru.
+        """
+        self.__keterangan = keterangan
